@@ -107,7 +107,7 @@ class WelcomeScreen extends StatelessWidget {
               'Curated event systems, elite vendor grids, and responsive orchestration designed for Material 3.',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
-            const Spacer(),
+            const SizedBox(height: AppSpacing.xxl),
             PrimaryButton(
               label: 'Get Started',
               onPressed: () => navigateTo(context, AppRoutes.signup),
