@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
-import '../../core/constants/app_spacing.dart';
 import '../../core/theme/app_text_styles.dart';
 import '../../core/shared/inputs/selection_controls.dart';
 import '../profile/language_selection_screen.dart';
 
-/// Central dashboard for managing notifications and security parameters.
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
 
