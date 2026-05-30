@@ -1,32 +1,69 @@
 import 'package:flutter/material.dart';
-
 import 'app_colors.dart';
 
+/// [@license Apache-2.0]
+/// Radius and organic Shadow constants mimicking premium matte surfaces.
 class AppRadius {
-  const AppRadius._();
+  AppRadius._();
 
-  static const double xs = 4;
-  static const double sm = 8;
-  static const double md = 12;
-  static const double lg = 16;
-  static const double xl = 24;
+  static const double xs = 4.0;
+  static const double s = 8.0;
+  static const double m = 12.0;
+  static const double l = 16.0;
+  static const double xl = 24.0;
+  static const double xxl = 32.0;
 
-  static BorderRadius get small => BorderRadius.circular(sm);
-  static BorderRadius get medium => BorderRadius.circular(md);
-  static BorderRadius get large => BorderRadius.circular(lg);
-  static BorderRadius get pill => BorderRadius.circular(999);
+  static const Radius radiusXS = Radius.circular(xs);
+  static const Radius radiusS = Radius.circular(s);
+  static const Radius radiusM = Radius.circular(m);
+  static const Radius radiusL = Radius.circular(l);
+  static const Radius radiusXL = Radius.circular(xl);
+  static const Radius radiusFixed = Radius.circular(99.0); // Pills & Avatars
+
+  static BorderRadius borderXS = BorderRadius.circular(xs);
+  static BorderRadius borderS = BorderRadius.circular(s);
+  static BorderRadius borderM = BorderRadius.circular(m);
+  static BorderRadius borderL = BorderRadius.circular(l);
+  static BorderRadius borderXL = BorderRadius.circular(xl);
+  static BorderRadius borderPill = BorderRadius.circular(99.0);
 }
 
 class AppShadows {
-  const AppShadows._();
+  AppShadows._();
 
-  static const List<BoxShadow> soft = [
-    BoxShadow(color: Color(0x14000000), blurRadius: 18, offset: Offset(0, 8)),
+  /// Soft elevation simulating extremely subtle component layers.
+  static final List<BoxShadow> lightElevation = [
+    BoxShadow(
+      color: AppColors.shadowSubtle,
+      blurRadius: 10,
+      offset: const Offset(0, 2),
+      spreadRadius: 0,
+    ),
   ];
 
-  static const List<BoxShadow> card = [
-    BoxShadow(color: Color(0x10000000), blurRadius: 12, offset: Offset(0, 4)),
+  /// Elevated card style modeling light floating segments.
+  static final List<BoxShadow> mediumElevation = [
+    BoxShadow(
+      color: AppColors.shadowMedium,
+      blurRadius: 20,
+      offset: const Offset(0, 8),
+      spreadRadius: -4,
+    ),
+    BoxShadow(
+      color: AppColors.shadowSubtle,
+      blurRadius: 4,
+      offset: const Offset(0, 1),
+      spreadRadius: 0,
+    ),
   ];
 
-  static BoxBorder get subtleBorder => Border.all(color: AppColors.border);
+  /// Premium high floating dropdown layer.
+  static final List<BoxShadow> highElevation = [
+    BoxShadow(
+      color: AppColors.shadowSubtle.withAlpha(25),
+      blurRadius: 32,
+      offset: const Offset(0, 20),
+      spreadRadius: -8,
+    ),
+  ];
 }

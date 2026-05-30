@@ -1,66 +1,100 @@
 import 'package:flutter/material.dart';
-
 import '../constants/app_colors.dart';
 
+/// [@license Apache-2.0]
+/// Premium Typography tokens with iOS-inspired tracking and weight hierarchies.
 class AppTextStyles {
-  const AppTextStyles._();
+  AppTextStyles._();
 
-  static const String fontFamily = 'Roboto';
-
-  static const TextStyle display = TextStyle(
-    fontFamily: fontFamily,
-    fontSize: 32,
+  // Display Styles
+  static const TextStyle displayLarge = TextStyle(
+    fontSize: 34,
     fontWeight: FontWeight.w700,
-    height: 1.15,
+    letterSpacing: -0.8,
     color: AppColors.textPrimary,
-  );
-
-  static const TextStyle headline = TextStyle(
-    fontFamily: fontFamily,
-    fontSize: 24,
-    fontWeight: FontWeight.w700,
     height: 1.2,
-    color: AppColors.textPrimary,
   );
 
-  static const TextStyle title = TextStyle(
-    fontFamily: fontFamily,
-    fontSize: 18,
+  static const TextStyle displayMedium = TextStyle(
+    fontSize: 28,
     fontWeight: FontWeight.w700,
-    height: 1.25,
+    letterSpacing: -0.6,
     color: AppColors.textPrimary,
+    height: 1.25,
   );
 
-  static const TextStyle body = TextStyle(
-    fontFamily: fontFamily,
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
-    height: 1.45,
+  // Heading Styles
+  static const TextStyle headingLarge = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w600,
+    letterSpacing: -0.4,
     color: AppColors.textPrimary,
+    height: 1.3,
+  );
+
+  static const TextStyle headingMedium = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    letterSpacing: -0.3,
+    color: AppColors.textPrimary,
+    height: 1.3,
+  );
+
+  static const TextStyle headingSmall = TextStyle(
+    fontSize: 17,
+    fontWeight: FontWeight.w600,
+    letterSpacing: -0.2,
+    color: AppColors.textPrimary,
+    height: 1.35,
+  );
+
+  // Body Styles
+  static const TextStyle bodyLarge = TextStyle(
+    fontSize: 17,
+    fontWeight: FontWeight.w400,
+    letterSpacing: -0.15,
+    color: AppColors.textPrimary,
+    height: 1.4,
+  );
+
+  static const TextStyle bodyMedium = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    letterSpacing: -0.1,
+    color: AppColors.textPrimary,
+    height: 1.45,
   );
 
   static const TextStyle bodySmall = TextStyle(
-    fontFamily: fontFamily,
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: FontWeight.w400,
-    height: 1.35,
+    letterSpacing: 0.0,
     color: AppColors.textSecondary,
+    height: 1.5,
   );
 
-  static const TextStyle label = TextStyle(
-    fontFamily: fontFamily,
-    fontSize: 14,
+  // Special System Styles
+  static const TextStyle caption = TextStyle(
+    fontSize: 11,
+    fontWeight: FontWeight.w500,
+    letterSpacing: 0.1,
+    color: AppColors.textSecondary,
+    height: 1.4,
+  );
+
+  static const TextStyle labelMedium = TextStyle(
+    fontSize: 13,
     fontWeight: FontWeight.w600,
-    height: 1.2,
+    letterSpacing: -0.1,
     color: AppColors.textPrimary,
+    height: 1.2,
   );
 
-  static TextTheme get textTheme => const TextTheme(
-    displaySmall: display,
-    headlineSmall: headline,
-    titleMedium: title,
-    bodyMedium: body,
-    bodySmall: bodySmall,
-    labelLarge: label,
+  static const TextStyle labelSmall = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w700,
+    letterSpacing: 0.2,
+    color: AppColors.textPrimary,
+    height: 1.1,
   );
 }

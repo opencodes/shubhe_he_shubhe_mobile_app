@@ -1,31 +1,41 @@
 import 'package:flutter/material.dart';
 
+/// [@license Apache-2.0]
+/// Premium Minimalist Color Token Library.
+/// Designed with #FFFFFF Pure White base, soft tone-on-tone grays,
+/// and intense obsidian-black semantic accents.
 class AppColors {
-  const AppColors._();
+  AppColors._();
 
-  static const Color primary = Color(0xFF8E2C4F);
-  static const Color primaryDark = Color(0xFF641B36);
-  static const Color primaryLight = Color(0xFFF7DDE7);
+  // Primary Branding & Accent Colors
+  static const Color primary = Color(0xFF000000); // Pure Obsidian
+  static const Color accent = Color(0xFF007AFF);  // Apple Blue Accent
+  
+  // Backgrounds & Surfaces
+  static const Color background = Color(0xFFFFFFFF); // Pure White Base
+  static const Color surface = Color(0xFFFBFBFD);    // Off-White Apple Surface
+  static const Color surfaceSecondary = Color(0xFFF5F5F7); // Subtle Light Gray Surface
+  static const Color border = Color(0xFFE5E5EA);     // Fine Hairline Gray Border
+  static const Color borderMedium = Color(0xFFD1D1D6); // Interactive Mid-contrast Border
 
-  static const Color secondary = Color(0xFF0F766E);
-  static const Color secondaryLight = Color(0xFFD9F3EF);
+  // Neutral Solid Grays
+  static const Color textPrimary = Color(0xFF1D1D1F);   // Dark Slate Gray
+  static const Color textSecondary = Color(0xFF86868B); // Cool System Muted Gray
+  static const Color textTertiary = Color(0xFFB0B0B5);  // Delicate Placeholder Gray
+  static const Color white = Color(0xFFFFFFFF);
 
-  static const Color accent = Color(0xFFEAB308);
-  static const Color accentLight = Color(0xFFFEF3C7);
+  // Semantic Status Colors
+  static const Color success = Color(0xFF34C759); // Apple Green
+  static const Color successBg = Color(0xFFEAF9EE);
+  static const Color warning = Color(0xFFFF9500); // Apple Orange
+  static const Color warningBg = Color(0xFFFFF4E5);
+  static const Color error = Color(0xFFFF3B30);   // Apple Red
+  static const Color errorBg = Color(0xFFFFEBEA);
+  static const Color info = Color(0xFF5856D6);    // Apple Violet/Indigo
+  static const Color infoBg = Color(0xFFF1F0FC);
 
-  static const Color background = Color(0xFFFFFBF7);
-  static const Color surface = Color(0xFFFFFFFF);
-  static const Color surfaceSoft = Color(0xFFF8F1EA);
-
-  static const Color textPrimary = Color(0xFF231F20);
-  static const Color textSecondary = Color(0xFF625B5D);
-  static const Color textMuted = Color(0xFF8B8587);
-
-  static const Color border = Color(0xFFE7DCD5);
-  static const Color divider = Color(0xFFF0E7E1);
-
-  static const Color success = Color(0xFF15803D);
-  static const Color warning = Color(0xFFD97706);
-  static const Color error = Color(0xFFB91C1C);
-  static const Color info = Color(0xFF2563EB);
+  // Alpha Overlays for Dynamic Shadows
+  static const Color shadowOpaque = Color(0xFF000000);
+  static Color shadowSubtle = const Color(0xFF000000).withAlpha(10); // ~4% opacity
+  static Color shadowMedium = const Color(0xFF000000).withAlpha(18); // ~7% opacity
 }
